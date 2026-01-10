@@ -24,6 +24,12 @@ function handleLogin(e) {
         messageDiv.className = "message error";
         messageDiv.style.display = "block";
     }
+
+    try{
+        
+    }catch(err){
+
+    }
 }
 
 async function handleRegister(e) {
