@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation for Dashboard -->
+    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+        <h2 style="margin: 0; color: #fff;">MyApp</h2>
+        <button id="logoutBtn" class="logout-btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.5); padding: 0.5rem 1rem; color: white; border-radius: 4px; cursor: pointer; transition: all 0.3s;">Logout</button>
+    </nav>
+    
+    <div class="form-box" style="margin-top: 50px;">
+      <div class="form-container">
+        <h2>Welcome, <span id="userName">User</span>!</h2>
+        <p style="text-align: center; color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem;">You have successfully logged in.</p>
+        
+        <div class="dashboard-content" style="text-align: center;">
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px; margin-bottom: 10px;">
+                <h4 style="margin: 0 0 10px 0;">Username</h4>
+                <p id="userUsername" style="margin: 0; color: #fff; font-weight: bold;">-</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
+                <h4 style="margin: 0 0 10px 0;">Email</h4>
+                <p id="userEmail" style="margin: 0; color: #fff; font-weight: bold;">-</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

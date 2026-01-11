@@ -2,6 +2,11 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import session from 'express-session'
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import { connectDB } from "./config/db.js"
 import { authRouter } from './routes/auth.routes.js'
@@ -19,9 +24,11 @@ app.use(cors({
     credentials: true
 }))
 app.use(express.json())
+app.use(express.static(path.join(__dirname, '../client')));
 
 // 2️⃣ Session middleware (needs body + cors ready)
 app.use(session({
+    name: "auth.sid",
     secret,
     resave: false,
     saveUninitialized: false,
